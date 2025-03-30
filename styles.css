@@ -11,8 +11,16 @@
 
         }
         .navbar {
-            background: linear-gradient(135deg,#AB969D, #a64ac9);
+            background: linear-gradient(135deg, #D8BFD8, #B589D6);
 			
+        }
+		.footer {
+            background: linear-gradient(135deg, #AB969D, #B589D6);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+			flex: 0;		
         }
         .navbar-brand, .nav-link {
             color: white !important;
@@ -49,14 +57,7 @@
 		.content {
 			flex: 1;
 		}
-        .footer {
-            background: linear-gradient(135deg, #AB969D, #a64ac9);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-			flex: 0;		
-        }
+        
 		
 		/* The hero image */
 		.hero-image {	
