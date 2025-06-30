@@ -1,78 +1,836 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonja Ergotherapie</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonja Janele-Rasic - Ergotherapie & Spiraldynamik®</title>
+  <meta name="description"
+    content="Professionelle Ergotherapie mit Spiraldynamik®, Beckenboden-Training und Rollstuhltraining. Ganzheitliche Behandlung für Neurologie, Orthopädie und Geriatrie in Wien.">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Sonja Janele-Rasic - Ergotherapie & Spiraldynamik®">
+  <meta property="og:description"
+    content="Professionelle Ergotherapie mit Spiraldynamik®, Beckenboden-Training und Rollstuhltraining. Ganzheitliche Behandlung für Neurologie, Orthopädie und Geriatrie in Wien.">
+  <meta property="og:type" content="website">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">Ergotherapie Sonja</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html#about">Über Mich</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Kontakt</a></li>
-					<li class="nav-item"><a class="nav-link" href="kosten.html">Kosten</a></li>
-					<li class="nav-item"><a class="nav-link" href="ablauf.html">Ablauf</a></li>
-					<li class="nav-item"><a class="nav-link" href="schwerpunkte.html">Schwerpunkte</a></li>
-                </ul>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <div class="logo" style="color: hsl(270, 100%, 65%);">Sonja Janele-Rasic</div>
+        <div class="subtitle">Ergotherapie & Spiraldynamik®</div>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="nav-menu">
+        <button class="nav-link" onclick="scrollToSection('home')">Home</button>
+        <button class="nav-link" onclick="scrollToSection('about')">Über mich</button>
+        <button class="nav-link" onclick="scrollToSection('services')">Leistungen</button>
+        <button class="nav-link" onclick="scrollToSection('methods')">Methoden</button>
+        <button class="nav-link" onclick="scrollToSection('pricing')">Kosten</button>
+        <button class="btn btn-primary" onclick="scrollToSection('contact')">Kontakt</button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <i data-lucide="menu" class="icon-lg" id="menu-icon"></i>
+        <i data-lucide="x" class="icon-lg hidden" id="close-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-content">
+        <button class="mobile-nav-link" onclick="scrollToSection('home')">Home</button>
+        <button class="mobile-nav-link" onclick="scrollToSection('about')">Über mich</button>
+        <button class="mobile-nav-link" onclick="scrollToSection('services')">Leistungen</button>
+        <button class="mobile-nav-link" onclick="scrollToSection('methods')">Methoden</button>
+        <button class="mobile-nav-link" onclick="scrollToSection('pricing')">Kosten</button>
+        <button class="btn btn-primary" onclick="scrollToSection('contact')"
+          style="margin-top: 0.5rem;">Kontakt</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text animate-fade-in-up">
+          <h1>
+            <span style="color: hsl(270, 100%, 65%);">Ergotherapie</span><br />
+            mit Herz und<br />
+            Kompetenz
+          </h1>
+          <p class="hero-subtitle">
+            Spiraldynamik® | Beckenboden | Rollstuhl- und Prothesentraining
+          </p>
+
+          <div class="hero-contact">
+            <div class="hero-contact-icon">
+              <i data-lucide="phone" class="icon-lg text-primary"></i>
             </div>
+            <div class="hero-contact-text">
+              <p>Termin vereinbaren</p>
+              <a href="tel:+436991923004">+43 699 19 23 00 46</a>
+            </div>
+          </div>
+
+          <div class="hero-contact">
+            <div class="hero-contact-icon">
+              <i data-lucide="mail" class="icon-lg text-primary"></i>
+            </div>
+            <div class="hero-contact-text">
+              <p>E-Mail Kontakt</p>
+              <a href="mailto:office@ergotherapie-janele.com">office@ergotherapie-janele.com</a>
+            </div>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-number">10+</div>
+              <div class="hero-stat-label">Jahre Erfahrung</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-number">15+</div>
+              <div class="hero-stat-label">Fortbildungen</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-number">100%</div>
+              <div class="hero-stat-label">Individuelle Betreuung</div>
+            </div>
+          </div>
         </div>
-    </nav>
-	<section class="hero-image">
-    <div>
-		<div class="image1">
-			<h1>Sonja Ergotherapie</h1>
-			<p>Welcome to my private Ergotherapie Website work in progress</p>
-		</div>
-	</div>
-	</section>
-
-    <section id="About" class="container mt-5">
-        <h2 class="text-center">Über mich</h2>
-        <div class="row text-center mt-4">
-            <div class="col-md-4">
-                <div class="card p-4">
-                    <i class="fas fa-user-md fa-3x text-primary"></i>
-                    <h4 class="mt-3">Personalized Therapy</h4>
-                    <p>Tailored treatment plans to meet your needs. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4">
-                    <i class="fas fa-dumbbell fa-3x text-primary"></i>
-                    <h4 class="mt-3">Rehabilitation Exercises</h4>
-                    <p>Strengthening and recovery programs. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4">
-                    <i class="fas fa-heartbeat fa-3x text-primary"></i>
-                    <h4 class="mt-3">Pain Management</h4>
-                    <p>Effective techniques to alleviate discomfort. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </div>
+        <!-- 800 600-->
+        <div class="hero-image animate-fade-in-up">
+          <img
+            src="sonjaherobanner.jpg"
+            alt="Ergotherapeutin bei der Behandlung">
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="container mt-5 text-center">
-        <h2>Kontakt</h2>
-        <p>Email: <a href="mailto:sonjaergotherapie@gmail.com">sonjaergotherapie@gmail.com</a></p>
-        <p>Phone: <a href="tel:1234567890">(123) 456-7890</a></p>
-    </section>
+  <!-- Working Methods Section -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="section-title">
+        <h2>Meine Arbeitsweise</h2>
+        <p>Ganzheitliche Ergotherapie mit bewährten Konzepten für Ihre individuelle Gesundheit</p>
+      </div>
 
-    <footer class="footer">
-        <p>&copy; 2025 Ergotherapie Sonja. All rights reserved.</p>
-        <p>Email: <a href="mailto:sonjaergotherapie@gmail.com" class="text-white">sonjaergotherapie@gmail.com</a>  Phone: <a href="tel:1234567890" class="text-white">(123) 456-7890</a></p>
-		<li class="nav-item"><a class="nav-link" href="impudata.html">Imperessum und Datenschutz</a></li>
-    </footer>
+      <div class="grid grid-3">
+        <div class="card card-gradient-primary">
+          <div class="card-icon card-icon-primary">
+            <i data-lucide="rotate-ccw" class="icon-xl"></i>
+          </div>
+          <h3>Spiraldynamik®</h3>
+          <p>Ermöglicht es, funktionelle Bewegungsabläufe zu analysieren und gezielt zu optimieren</p>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="card card-gradient-primary">
+          <div class="card-icon card-icon-primary">
+            <i data-lucide="heart" class="icon-xl"></i>
+          </div>
+          <h3>BeBo®-Konzept</h3>
+          <p>Fokussiert auf die Kräftigung und Stabilisierung des Beckenbodens</p>
+        </div>
+
+        <div class="card card-gradient-primary">
+          <div class="card-icon card-icon-primary">
+            <i data-lucide="lightbulb" class="icon-xl"></i>
+          </div>
+          <h3>Bobath-Konzept</h3>
+          <p>Zielt darauf ab, Bewegungsfunktionen und Muskelspannung zu normalisieren und alltagsrelevante Fähigkeiten
+            zu fördern</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section bg-gray-50">
+    <div class="container">
+      <div class="about">
+        <div class="about-text">
+          <h2>Hallo, ich bin <span class="text-primary">Sonja</span></h2>
+          <p>
+            In meiner Arbeit steht der Mensch als Ganzes im Mittelpunkt. „Den Menschen als Ganzes zu sehen -
+            Körper, Geist und Seele in Einklang bringen." - ist für mich essenziell.
+          </p>
+          <p>
+            Mein ganzheitlicher Ansatz ermöglicht es, nicht nur spezifische Symptome zu behandeln, sondern auch
+            die zugrundeliegenden Ursachen zu erkennen und gemeinsam mit Ihnen individuelle Lösungen zu entwickeln.
+          </p>
+
+          <div class="values-card">
+            <h3>Meine Werte</h3>
+            <div class="values-grid">
+              <div class="value-item">
+                <div class="value-icon">
+                  <i data-lucide="heart" class="icon text-primary"></i>
+                </div>
+                <span class="value-label">Empathie</span>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">
+                  <i data-lucide="users" class="icon text-primary"></i>
+                </div>
+                <span class="value-label">Wertschätzung</span>
+              </div>
+              <div class="value-item">
+                <div class="value-icon">
+                  <i data-lucide="network" class="icon text-primary"></i>
+                </div>
+                <span class="value-label">Ganzheitlichkeit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 600 400-->
+        <div>
+          <div class="about-image">
+            <img
+              src="sonjaabout.jpg"
+              alt="Sonja Janele-Rasic Ergotherapeutin">
+          </div>
+
+          <div class="career-card" style="margin-top: 2rem;">
+            <h3>Beruflicher Werdegang</h3>
+            <ul class="career-list">
+              <li>
+                <div class="bullet"></div>
+                <span>Lektorin an der FH Wiener Neustadt für das Modul ADL Skill Labs (seit 2023)</span>
+              </li>
+              <li>
+                <div class="bullet"></div>
+                <span>Freiberufliche Aufträge als Ergotherapeutin bei HeldYn Care und healthconsulting (seit
+                  2022)</span>
+              </li>
+              <li>
+                <div class="bullet"></div>
+                <span>Ergotherapeutin in der Praxisgemeinschaft in Hernals (PiH) mit Schwerpunkten: Neurologie,
+                  Orthopädie, Geriatrie, Ergonomie und Prävention (seit 2020)</span>
+              </li>
+              <li>
+                <div class="bullet"></div>
+                <span>Lektorin an der FH Campus Wien für das Modul technischer ArbeitnehmerInnenschutz -
+                  Gesundheitsförderung am Arbeitsplatz (seit 2018)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section bg-white">
+    <div class="container">
+      <div class="section-title">
+        <h2>Spezialisierungen</h2>
+        <p>
+          Meine Schwerpunkte liegen in den Bereichen Neurologie, Orthopädie für Erwachsene, Geriatrie,
+          Ergonomie und Prävention. Zusätzlich spezialisiere ich mich auf Rollstuhl- und Prothesentraining,
+          um die Mobilität und Selbstständigkeit meiner PatientInnen zu fördern.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Neurologie -->
+        <div class="card card-gradient-primary">
+          <div class="card-icon card-icon-primary">
+            <i data-lucide="brain" class="icon-xl"></i>
+          </div>
+          <h3>Neurologie</h3>
+          <p>Unterstützung bei neurologischen Erkrankungen zur Verbesserung von Selbständigkeit und Lebensqualität.</p>
+          <ul class="card-list">
+            <li><i data-lucide="check" class="icon text-primary"></i>Parkinson</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Schlaganfall, Gehirnblutung</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Schädelhirntrauma</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Querschnittslähmungen</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Multiple Sklerose</li>
+          </ul>
+        </div>
+
+        <!-- Orthopädie -->
+        <div class="card card-gradient-primary">
+          <div class="card-icon card-icon-primary">
+            <i data-lucide="bone" class="icon-xl"></i>
+          </div>
+          <h3>Orthopädie</h3>
+          <p>Förderung von Beweglichkeit, Kraft und Feinmotorik nach Verletzungen, Operationen oder chronischen
+            Beschwerden.</p>
+          <ul class="card-list">
+            <li><i data-lucide="check" class="icon text-primary"></i>Handverletzungen (z.B. Stauchungen, Prellungen,
+              Beugesehnenruptur)</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Frakturen (z.B. Kalvikulafraktur, Kahnbeinfraktur,
+              Humerusfraktur,...)</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Fehlhaltungen oder –belastungen der oberen
+              Extremitäten</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Kiefer (z.B. Fehlhaltungen, Schmerzen, Bruxismus,
+              Kieferknacken,...)</li>
+          </ul>
+        </div>
+
+        <!-- Geriatrie -->
+        <div class="card card-gradient-primary">
+          <div class="card-icon card-icon-primary">
+            <i data-lucide="users" class="icon-xl"></i>
+          </div>
+          <h3>Geriatrie</h3>
+          <p>Begleitung und Training für ältere Menschen zur Erhaltung von Selbstständigkeit und Mobilität.</p>
+          <ul class="card-list">
+            <li><i data-lucide="check" class="icon text-primary"></i>Osteoporose</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Rheuma</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Sturzprophylaxe</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Andere degenerative oder altersbedingte
+              Erkrankungen/ Veränderungen</li>
+          </ul>
+        </div>
+
+        <!-- Prävention -->
+        <div class="card card-gradient-primary">
+          <div class="card-icon card-icon-primary">
+            <i data-lucide="shield" class="icon-xl"></i>
+          </div>
+          <h3>Prävention</h3>
+          <p>Gesundheitsfördernde Maßnahmen zur Vorbeugung von Beschwerden und Erhalt der Leistungsfähigkeit.</p>
+          <ul class="card-list">
+            <li><i data-lucide="check" class="icon text-primary"></i>Ergonomische und gelenksschonende Beratung</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Arbeitsplatzgestaltung</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Beckenbodentraining</li>
+          </ul>
+        </div>
+
+        <!-- Rollstuhltraining -->
+        <div class="card card-gradient-primary">
+          <div class="card-icon card-icon-primary">
+            <i data-lucide="accessibility" class="icon-xl"></i>
+          </div>
+          <h3>Rollstuhltraining</h3>
+          <p>Individuelle Schulungen zur sicheren und eigenständigen Nutzung des Rollstuhls im In- und Outdoorbereich.
+          </p>
+          <ul class="card-list">
+            <li><i data-lucide="check" class="icon text-primary"></i>Fahrtechnik</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Kraft-, Ausdauer-, Gleichgewichts- und
+              Stabilitätstraining</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Überwinden von Hindernissen, Training auf
+              unterschiedlichen Untergründen</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Verkehrssicherheit</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Selbstständigkeit im Alltag</li>
+          </ul>
+        </div>
+
+        <!-- Hausbesuche -->
+        <div class="card card-gradient-accent">
+          <div class="card-icon card-icon-accent">
+            <i data-lucide="home" class="icon-xl"></i>
+          </div>
+          <h3>Hausbesuche</h3>
+          <p>Um eine optimale Betreuung zu gewährleisten, biete ich auch Hausbesuche an, sodass die Therapie in der
+            vertrauten Umgebung stattfinden kann.</p>
+          <ul class="card-list">
+            <li><i data-lucide="check" class="icon" style="color: hsl(var(--accent));"></i>Therapie zu Hause</li>
+            <li><i data-lucide="check" class="icon" style="color: hsl(var(--accent));"></i>Vertraute Umgebung</li>
+            <li><i data-lucide="check" class="icon" style="color: hsl(var(--accent));"></i>Individuelle Betreuung</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methods Section -->
+  <section id="methods" class="section bg-gray-50">
+    <div class="container">
+      <div class="section-title">
+        <h2>Therapiemethoden</h2>
+        <p>Ich arbeite nach bewährten ergotherapeutischen Konzepten</p>
+      </div>
+
+      <div>
+        <!-- Spiraldynamik -->
+        <div class="method-card">
+          <div class="method-content">
+            <div class="method-text">
+              <div class="method-header">
+                <div class="method-icon">
+                  <i data-lucide="rotate-ccw" class="icon text-primary"></i>
+                </div>
+                <h3 class="method-title">Spiraldynamik®</h3>
+              </div>
+              <p class="method-description">
+                Die Spiraldynamik ist ein ganzheitliches Bewegungskonzept, das auf der natürlichen Anatomie des
+                menschlichen Körpers basiert. Durch gezielte Übungen lernen Sie, Ihre Bewegungen besser zu koordinieren
+                und Fehlhaltungen zu vermeiden.
+              </p>
+              <p class="method-description">
+                Besonders für Menschen mit neurologischen oder orthopädischen Beschwerden ist diese Methode ein
+                wertvolles Werkzeug, um Bewegungen schmerzfrei und effizient zu gestalten.
+              </p>
+            </div>
+            <div class="method-image">
+              <img
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400"
+                alt="Spiraldynamik® Therapie">
+            </div>
+          </div>
+        </div>
+
+        <!-- Bobath-Konzept -->
+        <div class="method-card">
+          <div class="method-content">
+            <div class="method-text">
+              <div class="method-header">
+                <div class="method-icon">
+                  <i data-lucide="brain" class="icon text-primary"></i>
+                </div>
+                <h3 class="method-title">Bobath-Konzept</h3>
+              </div>
+              <p class="method-description">
+                Das Bobath Konzept ist ein neurologisches Behandlungskonzept, das sich an Menschen mit Schädigungen des
+                zentralen Nervensystems richtet - z.B. nach einem Schlaganfall oder Morbus Parkinson.
+              </p>
+              <p class="method-description">
+                Im Mittelpunkt steht die Förderung von Bewegungsfähigkeit und Selbstständigkeit im Alltag. Durch
+                gezielte therapeutische Reize und alltagsnahe Aktivitäten werden funktionelle Bewegungen angebahnt,
+                Spastik reduziert und kompensatorische Bewegungsmuster vermieden.
+              </p>
+            </div>
+            <div class="method-image method-reverse">
+              <img
+                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400"
+                alt="Bobath-Konzept Therapie">
+            </div>
+          </div>
+        </div>
+
+        <!-- BeBo®-Konzept -->
+        <div class="method-card">
+          <div class="method-content">
+            <div class="method-text">
+              <div class="method-header">
+                <div class="method-icon">
+                  <i data-lucide="heart" class="icon text-primary"></i>
+                </div>
+                <h3 class="method-title">BeBo®-Konzept</h3>
+              </div>
+              <p class="method-description">
+                Das BeBo® Training hilft Ihnen, Ihren Beckenboden funktionstüchtig zu erhalten oder wieder zu erlangen.
+                Das heißt: Ihr Beckenboden ist wach, aktiv, elastisch und in einem Gleichgewicht zwischen Anspannung und
+                Entspannung.
+              </p>
+              <p class="method-description">
+                Mit einem Mix aus wertvollen, verständlichen Informationen und leicht umsetzbaren Übungen, unterstütze
+                ich Sie fachkompetent dabei, einen gesunden Beckenboden zu erlangen. Das ganzheitliche BeBo® Konzept
+                strebt eine optimale Körperhaltung und Bewegungsqualität an.
+              </p>
+            </div>
+            <div class="method-image">
+              <img
+                src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400"
+                alt="BeBo®-Konzept Therapie">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="section bg-white">
+    <div class="container">
+      <div class="section-title">
+        <h2>Ablauf & Kosten</h2>
+        <p>Als Wahltherapeutin nehme ich mir Zeit für meine PatientInnen</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Process -->
+        <div>
+          <h3 style="font-size: 1.5rem; font-weight: bold; color: #111827; margin-bottom: 1.5rem;">Behandlungsablauf
+          </h3>
+
+          <div style="margin-bottom: 1.5rem;">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>Ausführliches Erstgespräch</h4>
+                <p>Der Mensch wird in seiner Gesamtheit und in seiner individuellen Lebenssituation betrachtet.</p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4>Gemeinsame Zielsetzung</h4>
+                <p>Das Behandlungsziel wird gemeinsam mit der/dem PatientIn formuliert.</p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4>Befunderhebung</h4>
+                <p>Mögliche Ursachen der Funktionsstörung werden erkannt und individuelle Behandlungstechniken
+                  ausgewählt.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bring-items">
+            <h4>Bitte mitbringen:</h4>
+            <ul class="bring-list">
+              <li><i data-lucide="check" class="icon"></i>Bewilligte Verordnung für Ergotherapie</li>
+              <li><i data-lucide="check" class="icon"></i>Befunde oder Arztbriefe, falls vorhanden</li>
+              <li><i data-lucide="check" class="icon"></i>Bequeme Kleidung</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pricing -->
+        <div>
+          <h3 style="font-size: 1.5rem; font-weight: bold; color: #111827; margin-bottom: 1.5rem;">Preisübersicht</h3>
+
+          <div style="margin-bottom: 1.5rem;">
+            <div class="price-card price-card-primary">
+              <div class="price-content">
+                <div class="price-info">
+                  <h4>30 Minuten Ergotherapie</h4>
+                  <p>Einzeltherapie</p>
+                </div>
+                <div class="price-amount price-amount-primary">80€</div>
+              </div>
+            </div>
+
+            <div class="price-card price-card-primary">
+              <div class="price-content">
+                <div class="price-info">
+                  <h4>45 Minuten Ergotherapie</h4>
+                  <p>Standardbehandlung</p>
+                </div>
+                <div class="price-amount price-amount-primary">95€</div>
+              </div>
+            </div>
+
+            <div class="price-card price-card-primary">
+              <div class="price-content">
+                <div class="price-info">
+                  <h4>60 Minuten Ergotherapie</h4>
+                  <p>Intensive Behandlung</p>
+                </div>
+                <div class="price-amount price-amount-primary">110€</div>
+              </div>
+            </div>
+
+            <div class="price-card price-card-accent">
+              <div class="price-content">
+                <div class="price-info">
+                  <h4>60 Minuten mit Hausbesuch</h4>
+                  <p>Therapie zu Hause</p>
+                </div>
+                <div class="price-amount price-amount-accent">135€</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="insurance-info">
+            <h4>
+              <i data-lucide="info" class="icon"></i>
+              Kostenrückerstattung
+            </h4>
+            <p>Je nach Krankenkasse beträgt der rückerstattete Kostenanteil 25% bis 50%.</p>
+            <p>Viele Zusatzversicherungen zahlen den Differenzbetrag bei Ergotherapie dazu.</p>
+            <p class="highlight">Wichtig: Der Verordnungsschein muss vorab bei Ihrer Krankenkasse chefärztlich bewilligt
+              werden. (Bei der ÖGK ist eine Bewilligung bis auf Weiteres nicht notwendig).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section bg-light-purple">
+    <div class="container">
+      <div class="section-title">
+        <h2>Kontakt & Terminvereinbarung</h2>
+        <p style="color: hsl(270, 10%, 45%);">
+          Ich freue mich darauf, Sie kennenzulernen und Sie auf Ihrem Weg zu begleiten
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <div style="margin-bottom: 2rem;">
+            <div class="contact-info">
+              <div class="contact-icon">
+                <i data-lucide="phone" class="icon-lg"></i>
+              </div>
+              <div class="contact-text">
+                <h3>Telefonische Terminvereinbarung</h3>
+                <a href="tel:+436991923004">+43 699 19 23 00 46</a>
+              </div>
+            </div>
+
+            <div class="contact-info">
+              <div class="contact-icon">
+                <i data-lucide="mail" class="icon-lg"></i>
+              </div>
+              <div class="contact-text">
+                <h3>E-Mail Kontakt</h3>
+                <a href="mailto:office@ergotherapie-janele.com">office@ergotherapie-janele.com</a>
+              </div>
+            </div>
+
+            <div class="contact-info">
+              <div class="contact-icon">
+                <i data-lucide="clock" class="icon-lg"></i>
+              </div>
+              <div class="contact-text">
+                <h3>Erreichbarkeit</h3>
+                <p>Montag bis Freitag: 8:00 - 18:00 Uhr</p>
+              </div>
+            </div>
+
+            <div class="contact-info">
+              <div class="contact-icon">
+                <i data-lucide="home" class="icon-lg"></i>
+              </div>
+              <div class="contact-text">
+                <h3>Hausbesuche möglich</h3>
+                <p>Therapie in vertrauter Umgebung</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="notes-card">
+            <h3>Wichtige Hinweise</h3>
+            <ul class="notes-list">
+              <li><i data-lucide="check" class="icon"></i>Ärztliche Verordnung erforderlich</li>
+              <li><i data-lucide="check" class="icon"></i>Chefärztliche Bewilligung bei Krankenkasse</li>
+              <li><i data-lucide="check" class="icon"></i>Teilweise Kostenrückerstattung möglich</li>
+              <li><i data-lucide="check" class="icon"></i>Terminabsagen bitte 24h im Voraus</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Standort Wien</h3>
+          <div style="margin-bottom: 1rem;">
+            <p style="color: hsl(270, 10%, 45%); margin-bottom: 1.5rem;">
+              Hausbesuche im Raum Wien und Umgebung möglich
+            </p>
+          </div>
+
+          <div style="border-radius: 0.75rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2731061.4207835663!2d14.550072599999997!3d48.2081743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d079e5136ca9f%3A0x4e8854411956afbc!2sWien%2C%20%C3%96sterreich!5e0!3m2!1sde!2sat!4v1703761234567!5m2!1sde!2sat"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <div class="form-footer">
+            <p>Rufen Sie an für eine Terminvereinbarung</p>
+            <a href="tel:+436991923004" class="btn btn-accent">
+              <i data-lucide="phone" class="icon" style="margin-right: 0.5rem;"></i>
+              Jetzt anrufen
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Sonja Janele-Rasic</div>
+          <p class="footer-description">
+            Staatlich anerkannte Ergotherapeutin<br />
+            Spiraldynamik® Fachkraft<br />
+            BeBo® Kursleiterin
+          </p>
+        </div>
+
+        <div>
+          <h3>Leistungen</h3>
+          <ul class="footer-list">
+            <li><a href="#services" onclick="scrollToSection('services')">Neurologie</a></li>
+            <li><a href="#services" onclick="scrollToSection('services')">Orthopädie</a></li>
+            <li><a href="#services" onclick="scrollToSection('services')">Geriatrie</a></li>
+            <li><a href="#services" onclick="scrollToSection('services')">Rollstuhltraining</a></li>
+            <li><a href="#services" onclick="scrollToSection('services')">Hausbesuche</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Kontakt</h3>
+          <div class="footer-contact">
+            <i data-lucide="phone" class="icon"></i>
+            <a href="tel:+436991923004">+43 699 19 23 00 46</a>
+          </div>
+          <div class="footer-contact">
+            <i data-lucide="mail" class="icon"></i>
+            <a href="mailto:office@ergotherapie-janele.com">office@ergotherapie-janele.com</a>
+          </div>
+          <div class="footer-contact">
+            <i data-lucide="clock" class="icon"></i>
+            <span>Mo-Fr: 8:00-18:00 Uhr</span>
+          </div>
+          <div class="footer-contact">
+            <i data-lucide="home" class="icon"></i>
+            <span>Hausbesuche möglich</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Sonja Janele-Rasic - Ergotherapie. Alle Rechte vorbehalten.</p>
+        <p>
+          <span class="footer-links">
+            <a href="#datenschutz">Datenschutz</a> | <a href="#impressum">Impressum</a>
+          </span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <h4 id="toast-title"></h4>
+    <p id="toast-description"></p>
+  </div>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Navigation functionality
+    let isScrolled = false;
+    let mobileMenuOpen = false;
+
+    function scrollToSection(sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.offsetTop - offset;
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        });
+      }
+      // Close mobile menu if open
+      if (mobileMenuOpen) {
+        toggleMobileMenu();
+      }
+    }
+
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      mobileMenuOpen = !mobileMenuOpen;
+
+      if (mobileMenuOpen) {
+        mobileMenu.classList.add('active');
+        menuIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.remove('active');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    }
+
+    // Handle scroll events
+    function handleScroll() {
+      const scrollY = window.scrollY;
+      const navbar = document.getElementById('navbar');
+
+      if (scrollY > 10 && !isScrolled) {
+        navbar.classList.add('scrolled');
+        isScrolled = true;
+      } else if (scrollY <= 10 && isScrolled) {
+        navbar.classList.remove('scrolled');
+        isScrolled = false;
+      }
+    }
+
+    // Toast notification functionality
+    function showToast(title, description, type = 'success') {
+      const toast = document.getElementById('toast');
+      const toastTitle = document.getElementById('toast-title');
+      const toastDescription = document.getElementById('toast-description');
+
+      toastTitle.textContent = title;
+      toastDescription.textContent = description;
+
+      // Remove existing classes
+      toast.classList.remove('success', 'error');
+      // Add new type class
+      toast.classList.add(type);
+
+      // Show toast
+      toast.classList.add('show');
+
+      // Hide toast after 5 seconds
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 5000);
+    }
+
+    // Contact form functionality
+    function handleContactForm(e) {
+      e.preventDefault();
+
+      const formData = new FormData(e.target);
+      const name = formData.get('name');
+      const phone = formData.get('phone');
+
+      // Basic validation
+      if (!name || !phone) {
+        showToast('Fehler', 'Bitte füllen Sie alle Pflichtfelder aus.', 'error');
+        return;
+      }
+
+      // Show success message
+      showToast('Vielen Dank für Ihre Terminanfrage!', 'Ich werde mich in Kürze bei Ihnen melden.');
+
+      // Reset form
+      e.target.reset();
+    }
+
+    // Event listeners
+    window.addEventListener('scroll', handleScroll);
+    document.getElementById('contact-form').addEventListener('submit', handleContactForm);
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function (e) {
+      const navbar = document.getElementById('navbar');
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+
+      if (mobileMenuOpen && !navbar.contains(e.target)) {
+        toggleMobileMenu();
+      }
+    });
+
+    // Initialize icons after page load
+    document.addEventListener('DOMContentLoaded', function () {
+      lucide.createIcons();
+    });
+  </script>
 </body>
+
 </html>
