@@ -19,13 +19,13 @@
   <link rel="stylesheet" href="style.css">
 
 </head>
-
+<!--  (old)#8b4ea7  choosing this : #965faf-->
 <body>
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <div class="nav-brand">
-        <div class="logo" style="color: hsl(270, 100%, 65%);">Sonja Janele-Rasic</div>
+        <div class="logo" style="color: #965faf;">Sonja Janele-Rasic</div>
         <div class="subtitle">Ergotherapie & Spiraldynamik®</div>
       </div>
 
@@ -34,7 +34,7 @@
         <button class="nav-link" onclick="scrollToSection('home')">Home</button>
         <button class="nav-link" onclick="scrollToSection('about')">Über mich</button>
         <button class="nav-link" onclick="scrollToSection('services')">Spezialisierungen</button>
-        <button class="nav-link" onclick="scrollToSection('methods')">Methoden</button>
+        <button class="nav-link" onclick="scrollToSection('methods')">Maßnahmen</button>
         <button class="nav-link" onclick="scrollToSection('pricing')">Kosten</button>
         <button class="nav-link" onclick="scrollToSection('contact')">Kontakt</button>
       </div>
@@ -52,7 +52,7 @@
         <button class="mobile-nav-link" onclick="scrollToSection('home')">Home</button>
         <button class="mobile-nav-link" onclick="scrollToSection('about')">Über mich</button>
         <button class="mobile-nav-link" onclick="scrollToSection('services')">Spezialisierungen</button>
-        <button class="mobile-nav-link" onclick="scrollToSection('methods')">Methoden</button>
+        <button class="mobile-nav-link" onclick="scrollToSection('methods')">Maßnahmen</button>
         <button class="mobile-nav-link" onclick="scrollToSection('pricing')">Kosten</button>
         <button class="mobile-nav-link" onclick="scrollToSection('contact')">Kontakt</button>
       </div>
@@ -65,7 +65,7 @@
       <div class="hero-content">
         <div class="hero-text animate-fade-in-up">
           <h1>
-            <span style="color: hsl(270, 100%, 65%);">Ergotherapie</span><br />
+            <span style="color: #965faf;">Ergotherapie</span><br />
             mit Herz und<br />
             Kompetenz
           </h1>
@@ -299,10 +299,9 @@
               Beugesehnenruptur)</li>
             <li><i data-lucide="check" class="icon text-primary"></i>Frakturen (z.B. Kalvikulafraktur, Kahnbeinfraktur,
               Humerusfraktur,...)</li>
-            <li><i data-lucide="check" class="icon text-primary"></i>Fehlhaltungen oder –belastungen der oberen
-              Extremitäten</li>
-            <li><i data-lucide="check" class="icon text-primary"></i>Kiefer (z.B. Fehlhaltungen, Schmerzen, Bruxismus,
-              Kieferknacken,...)</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Fehlhaltungen oder - belastungen (z.B. Schulter-, Nacken- oder Kieferschmerzen, Frozen shoulder,…)</li>
+            <li><i data-lucide="check" class="icon text-primary"></i>Amputationen und Prothesen (z.B. Unterschenkelprothesenversorgung und –training) 
+			  </li>
           </ul>
         </div>
 
@@ -377,8 +376,8 @@
   <section id="methods" class="section bg-gray-50">
     <div class="container">
       <div class="section-title">
-        <h2>Therapiemethoden</h2>
-        <p>Ich arbeite nach bewährten ergotherapeutischen Konzepten</p>
+        <h2>Therapiemaßnahmen</h2>
+        <!-- <p>Ich arbeite nach bewährten ergotherapeutischen Konzepten</p> -->
       </div>
 
       <div>
@@ -386,36 +385,12 @@
         <div class="method-card">
           <div class="method-content">
             <div class="method-text">
-              <div class="method-header">
-                <div class="method-icon">
-                  <i data-lucide="rotate-ccw" class="icon text-primary"></i>
-                </div>
-                <h3 class="method-title">Physisches Training</h3>
-              </div>
+             
               <p class="method-description">
                     Training der Alltagsaktivitäten 
 					Körperpflege, An- und Ausziehen, Essen und Trinken, Kochen, Einkaufen, Harn- und Stuhlkontinenz, ...
               </p>
-            </div>
-            <div class="method-image">
-              <img
-                src="sonjamethod1.jpg"
-                alt="Spiraldynamik® Therapie">
-            </div>
-          </div>
-        </div>
-
-        <!-- Bobath-Konzept -->
-        <div class="method-card">
-          <div class="method-content">
-            <div class="method-text">
-              <div class="method-header">
-                <div class="method-icon">
-                  <i data-lucide="brain" class="icon text-primary"></i>
-                </div>
-                <h3 class="method-title">Aufbauende Maßnahmen</h3>
-              </div>
-              <p class="method-description">
+			  <p class="method-description">
                     Therapie sensomotorischer Fertigkeiten				 
 					Aufbau und Stärkung der Muskulatur, Gleichgewichtstraining, Beweglichkeit, Koordination, Körperwahrnehmung, Schmerzreduktion, Ausdauer, Sturzprophylaxe, …
               </p>
@@ -423,26 +398,7 @@
                     Training der kognitiven Fertigkeiten 
 					Konzentration, Gedächtnis, Wahrnehmung, Orientierung, …
               </p>
-            </div>
-            <div class="method-image method-reverse">
-              <img
-                src="sonjamethod3.jpg"
-                alt="Bobath-Konzept Therapie">
-            </div>
-          </div>
-        </div>
-
-        <!-- BeBo®-Konzept -->
-        <div class="method-card">
-          <div class="method-content">
-            <div class="method-text">
-              <div class="method-header">
-                <div class="method-icon">
-                  <i data-lucide="heart" class="icon text-primary"></i>
-                </div>
-                <h3 class="method-title">Persönliche Betreuung</h3>
-              </div>
-              <p class="method-description">
+			  <p class="method-description">
                         Hilfsmittelberatung,- Versorgung und – training 
 							Prothesen, Rollstuhl, Hilfsmittel für Alltagsaktivitäten, Zusammenarbeit mit Hilfsmittelfirmen
               </p>
@@ -454,8 +410,8 @@
             </div>
             <div class="method-image">
               <img
-                src="sonjamethod2.jpg"
-                alt="BeBo®-Konzept Therapie">
+                src="sonjamethodtotal.jpg"
+                alt="Spiraldynamik® Therapie">
             </div>
           </div>
         </div>
@@ -694,11 +650,11 @@
           <h3>Kontakt</h3>
           <div class="footer-contact">
             <i data-lucide="phone" class="icon"></i>
-            <a href="tel:+436991923004">+43 699 19 23 00 46</a>
+            <p>+43 699 19 23 00 46</p>
           </div>
           <div class="footer-contact">
             <i data-lucide="mail" class="icon"></i>
-            <a href="mailto:sonja.janele@gmx.at">sonja.janele@gmx.at</a>
+            <p>sonja.janele@gmx.at</p>
           </div>
           <div class="footer-contact">
             <i data-lucide="clock" class="icon"></i>
@@ -712,10 +668,10 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2024 Sonja Janele-Rasic - Ergotherapie. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2025 Sonja Janele-Rasic - Ergotherapie. Alle Rechte vorbehalten.</p>
         <p>
           <span class="footer-links">
-            <a href="datenschutz.html">Datenschutz</a> | <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html" style="color: black;">Datenschutz</a> | <a href="impressum.html" style="color: black;">Impressum</a>
           </span>
         </p>
       </div>
