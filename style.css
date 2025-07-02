@@ -1140,6 +1140,147 @@ html {
   color: #004499;
 }
 
+/* Slideshow Styles */
+.slideshow-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.slideshow-wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .slideshow-wrapper {
+    height: 600px;
+  }
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide.prev {
+  transform: translateX(-100%);
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slideshow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.slideshow-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slideshow-btn-prev {
+  left: 1rem;
+}
+
+.slideshow-btn-next {
+  right: 1rem;
+}
+
+.slideshow-btn .icon-lg {
+  color: hsl(var(--primary));
+}
+
+.slideshow-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.dot:hover,
+.dot.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+/* Touch/swipe support for mobile */
+.slideshow-wrapper {
+  touch-action: pan-y;
+}
+
+@media (max-width: 768px) {
+  .slideshow-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .slideshow-btn-prev {
+    left: 0.5rem;
+  }
+  
+  .slideshow-btn-next {
+    right: 0.5rem;
+  }
+  
+  .slideshow-dots {
+    bottom: 1rem;
+  }
+  
+  .dot {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+}
+
 /* Utilities */
 .icon {
   width: 1rem;
